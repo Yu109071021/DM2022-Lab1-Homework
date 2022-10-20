@@ -37,4 +37,12 @@ def tokenize_text(text, remove_stopwords=False):
             tokens.append(word)
     return tokens
 
+def transform_lines(lines_list):
+    reviewsentimentList = []
+    for l in lines_list:
+        x=l.split('\t')
+        reviewsentimentList.append([str.lstrip(str.rstrip(x[0])),str.lstrip(str.rstrip(x[1]))])
+    return reviewsentimentList
+        
+
 
